@@ -1,8 +1,8 @@
-import epress from "express";
+import express from "express";
 import {resolve} from "path";
 const __dirname = import.meta.dirname;
 
-const app = epress();
+const app = express();
 app.use(express.static(resolve(__dirname, "public")));
 app.use("/bootstrap", express.static(resolve(__dirname, "node_modules/bootstrap/dist")))
 app.use("/jquery", express.static(resolve(__dirname, "node_modules/jquery/dist")))
